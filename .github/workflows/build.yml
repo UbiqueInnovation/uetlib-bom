@@ -44,8 +44,10 @@ jobs:
               with:
                   repository: UbiqueInnovation/uetlib-core
                   path: uetlib-core
-                  token: ${{ secrets.GITHUB_TOKEN }}
+                  token: ${{ secrets.WORKFLOW_PAT_GITHUB }}
                   ref: main
+
+            ## TODO BUMP VERSION
 
             - name: Build with Maven
               run: mvn --batch-mode --update-snapshots install -DskipTests=true -f uetlib-core/pom.xml
