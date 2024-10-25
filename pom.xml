@@ -29,7 +29,7 @@
         <!-- Sonar & Jacoco coverage reports -->
         <sonar.coverage.module/>
         <sonar.coverage.jacoco.xmlReportPaths>
-            ${project.basedir}/${sonar.coverage.module}/target/site/jacoco-aggregate/jacoco.xml
+            ${project.basedir}/../${sonar.coverage.module}/target/site/jacoco-aggregate/jacoco.xml
         </sonar.coverage.jacoco.xmlReportPaths>
         <sonar.projectName>${project.artifactId}</sonar.projectName>
         <sonar.projectKey>UbiqueInnovation_${sonar.projectName}</sonar.projectKey>
