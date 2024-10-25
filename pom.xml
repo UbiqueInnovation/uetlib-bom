@@ -18,7 +18,7 @@
 
         <!-- Versions -->
         <com.fasterxml.jackson.version>2.17.2</com.fasterxml.jackson.version>
-        <com.google.protobuf.version>4.28.2</com.google.protobuf.version>
+        <com.google.protobuf.version>4.28.3</com.google.protobuf.version>
         <io.sentry.version>7.14.0</io.sentry.version>
         <org.flywaydb.version>10.13.0</org.flywaydb.version>
         <org.geotools.version>32.0</org.geotools.version>
