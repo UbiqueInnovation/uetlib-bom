@@ -33,8 +33,8 @@ jobs:
             - name: Create custom artifactory settings.xml
               uses: whelk-io/maven-settings-xml-action@9dc09b23833fa9aa7f27b63db287951856f3433d
               with:
-                  servers: '[{"id": "ubique-artifactory", "username": "${{ secrets.artifactory_user}}", "password": "${{ secrets.artifactory_password }}"}]'
-                  repositories: '[{"id" : "ubique-artifactory", "url" : "${{ secrets.artifactory_url }}${{ secrets.artifactory_repo }}"}]'
+                  servers: '[{"id": "ubique-artifactory", "username": "${{ secrets.UB_ARTIFACTORY_USER }}", "password": "${{ secrets.UB_ARTIFACTORY_PASSWORD }}"}]'
+                  repositories: '[{"id" : "ubique-artifactory", "url" : "${{ secrets.UB_ARTIFACTORY_URL }}${{ secrets.UB_ARTIFACTORY_REPO_BACKEND }}"}]'
 
             - name: Build with Maven
               run: mvn --batch-mode --update-snapshots install -DskipTests=true -f ./pom.xml
