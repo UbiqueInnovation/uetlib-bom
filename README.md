@@ -18,6 +18,15 @@ You can use it as following:
 </parent>
 ```
 
+To set up sonar cloud with coverage reports, add the following to your properties:
+
+```xml
+<properties>
+    <sonar.projectName>my-project</sonar.projectName>
+    <sonar.coverage.module>my-project-coverage</sonar.coverage.module>
+</properties>
+```
+
 ## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md)
