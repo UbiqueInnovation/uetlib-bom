@@ -47,7 +47,8 @@ jobs:
                   token: ${{ secrets.WORKFLOW_PAT_GITHUB }}
                   ref: main
 
-            ## TODO BUMP VERSION
+            - name: Bump Parent Version
+              run: mvn versions:update-parent -DallowSnapshots=true
 
             - name: Build with Maven
               run: mvn --batch-mode --update-snapshots install -DskipTests=true -f uetlib-core/uetlib-core/pom.xml
