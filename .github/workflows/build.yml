@@ -20,6 +20,7 @@ jobs:
             artifactory_repo: ${{ secrets.UB_ARTIFACTORY_REPO_BACKEND }}
 
     test-version-bump:
+        name: Test Version Bump
         runs-on: ubuntu-latest
         steps:
             - name: Checkout repository
