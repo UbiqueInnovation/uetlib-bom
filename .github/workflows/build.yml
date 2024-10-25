@@ -42,8 +42,8 @@ jobs:
             - name: Checkout uetlib-core
               uses: actions/checkout@v4
               with:
-                  repository: https://github.com/UbiqueInnovation/uetlib-core  # Replace with the repository you want to checkout
-                  path: uetlib-core  # The subfolder where the other repo will be checked out
+                  repository: UbiqueInnovation/uetlib-core
+                  path: uetlib-core
                   ref: main
 
             - name: Build with Maven
