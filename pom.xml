@@ -355,6 +355,40 @@
                 <artifactId>sqlite-jdbc</artifactId>
                 <version>3.47.0.0</version>
             </dependency>
+
+            <dependency>
+                <groupId>io.trbl</groupId>
+                <artifactId>blurhash</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.imgscalr</groupId>
+                <artifactId>imgscalr-lib</artifactId>
+                <version>4.2</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.twelvemonkeys.imageio</groupId>
+                <artifactId>imageio-jpeg</artifactId>
+                <version>3.12.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.drewnoakes</groupId>
+                <artifactId>metadata-extractor</artifactId>
+                <version>2.19.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.tomcat.embed</groupId>
+                <artifactId>tomcat-embed-core</artifactId>
+                <version>11.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tomcat.embed</groupId>
+                <artifactId>tomcat-embed-el</artifactId>
+                <version>11.0.0</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
