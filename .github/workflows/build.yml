@@ -31,12 +31,12 @@ jobs:
           - package: uetlib-geo
             repository: uetlib-geo
             pom_path: uetlib-geo/pom.xml
-#          - package: uetlib-test
-#            repository: uetlib-test
-#            pom_path: uetlib-test/uetlib-test/pom.xml
-#          - package: uetlib-test
-#            repository: uetlib-testcontainers
-#            pom_path: uetlib-test/uetlib-testcontainers/pom.xml
+          #          - package: uetlib-test
+          #            repository: uetlib-test
+          #            pom_path: uetlib-test/uetlib-test/pom.xml
+          #          - package: uetlib-test
+          #            repository: uetlib-testcontainers
+          #            pom_path: uetlib-test/uetlib-testcontainers/pom.xml
           - package: uetlib-db
             repository: uetlib-db
             pom_path: uetlib-db/pom.xml
@@ -64,19 +64,19 @@ jobs:
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots install -DskipTests=true -f ./pom.xml
 
-      - name: Checkout ${{ marix.repository }} to verify ${{ marix.package }}
+      - name: Checkout ${{ matrix.repository }} to verify ${{ matrix.package }}
         uses: actions/checkout@v4
         with:
-          repository: UbiqueInnovation/${{ marix.repository }}
-          path: ${{ marix.package }}
+          repository: UbiqueInnovation/${{ matrix.repository }}
+          path: ${{ matrix.package }}
           token: ${{ secrets.WORKFLOW_PAT_GITHUB }}
           ref: main
 
-      - name: Bump Parent Version for package ${{ marix.package }}
-        run: mvn versions:update-parent -DallowSnapshots=true -f ${{ marix.pom_path }}
+      - name: Bump Parent Version for package ${{ matrix.package }}
+        run: mvn versions:update-parent -DallowSnapshots=true -f ${{ matrix.pom_path }}
 
-      - name: Build ${{ marix.package }} with Maven
-        run: mvn --batch-mode --update-snapshots install -f ${{ marix.pom_path }}
+      - name: Build ${{ matrix.package }} with Maven
+        run: mvn --batch-mode --update-snapshots install -f ${{ matrix.pom_path }}
 
   deploy-dev-code_quality:
     name: Code Analysis (Sonar Cloud)
