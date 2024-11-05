@@ -43,11 +43,6 @@
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-core</artifactId>
             </dependency>
-            <dependency>
-                <groupId>org.mockito</groupId>
-                <artifactId>mockito-inline</artifactId>
-                <version>5.2.0</version>
-            </dependency>
 
             <!-- Used to read maven artifact versions, i.e. the version of the backend lib used -->
             <dependency>
