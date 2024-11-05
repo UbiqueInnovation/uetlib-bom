@@ -22,6 +22,30 @@ jobs:
   test-version-bump:
     name: Test Version Bump
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - package: uetlib-core
+            repository: uetlib-core
+            pom_path: uetlib-core/uetlib-core/pom.xml
+          - package: uetlib-geo
+            repository: uetlib-geo
+            pom_path: uetlib-geo/pom.xml
+#          - package: uetlib-test
+#            repository: uetlib-test
+#            pom_path: uetlib-test/uetlib-test/pom.xml
+#          - package: uetlib-test
+#            repository: uetlib-testcontainers
+#            pom_path: uetlib-test/uetlib-testcontainers/pom.xml
+          - package: uetlib-db
+            repository: uetlib-db
+            pom_path: uetlib-db/pom.xml
+          - package: uetlib-spring
+            repository: uetlib-spring
+            pom_path: uetlib-spring/pom.xml
+          - package: uetlib-storage-spring
+            repository: uetlib-storage-spring
+            pom_path: uetlib-storage-spring/pom.xml
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -40,19 +64,19 @@ jobs:
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots install -DskipTests=true -f ./pom.xml
 
-      - name: Checkout uetlib-core
+      - name: Checkout ${{ marix.repository }} to verify ${{ marix.package }}
         uses: actions/checkout@v4
         with:
-          repository: UbiqueInnovation/uetlib-core
-          path: uetlib-core
+          repository: UbiqueInnovation/${{ marix.repository }}
+          path: ${{ marix.package }}
           token: ${{ secrets.WORKFLOW_PAT_GITHUB }}
           ref: main
 
-      - name: Bump Parent Version
-        run: mvn versions:update-parent -DallowSnapshots=true -f uetlib-core/uetlib-core/pom.xml
+      - name: Bump Parent Version for package ${{ marix.package }}
+        run: mvn versions:update-parent -DallowSnapshots=true -f ${{ marix.pom_path }}
 
-      - name: Build with Maven
-        run: mvn --batch-mode --update-snapshots install -f uetlib-core/uetlib-core/pom.xml
+      - name: Build ${{ marix.package }} with Maven
+        run: mvn --batch-mode --update-snapshots install -f ${{ marix.pom_path }}
 
   deploy-dev-code_quality:
     name: Code Analysis (Sonar Cloud)
