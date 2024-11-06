@@ -39,6 +39,15 @@
 
     <dependencyManagement>
         <dependencies>
+
+            <!-- TODO remove jackson-bom version override when spring-boot includes 2.18+ -->
+            <dependency>
+                <groupId>com.fasterxml.jackson</groupId>
+                <artifactId>jackson-bom</artifactId>
+                <version>2.18.1</version>
+                <scope>import</scope>
+            </dependency>
+
             <!-- Used to read maven artifact versions, i.e. the version of the backend lib used -->
             <dependency>
                 <groupId>de.westemeyer</groupId>
