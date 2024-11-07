@@ -43,6 +43,12 @@ jobs:
           - package: uetlib-spring
             repository: uetlib-spring
             pom_path: uetlib-spring/pom.xml
+          - package: uetlib-spring-cloud
+            repository: uetlib-spring-cloud
+            pom_path: uetlib-spring-cloud/pom.xml
+          - package: uetlib-monitoring
+            repository: uetlib-monitoring
+            pom_path: uetlib-monitoring/pom.xml
           - package: uetlib-storage-spring
             repository: uetlib-storage-spring
             pom_path: uetlib-storage-spring/pom.xml
