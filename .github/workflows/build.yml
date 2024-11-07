@@ -23,6 +23,7 @@ jobs:
     name: Test Version Bump
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         include:
           - package: uetlib-core
