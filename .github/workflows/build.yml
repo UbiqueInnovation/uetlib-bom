@@ -53,6 +53,12 @@ jobs:
           - package: uetlib-storage-spring
             repository: uetlib-storage-spring
             pom_path: uetlib-storage-spring/pom.xml
+          - package: uetlib-job
+            repository: uetlib-job
+            pom_path: uetlib-job/pom.xml
+          - package: uetlib-job-testapp
+            repository: uetlib-job-testapp
+            pom_path: uetlib-job-testapp/pom.xml
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -62,6 +68,7 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
+
       - name: Create custom artifactory settings.xml
         uses: whelk-io/maven-settings-xml-action@9dc09b23833fa9aa7f27b63db287951856f3433d
         with:
