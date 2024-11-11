@@ -399,6 +399,24 @@
                         </protocArtifact>
                     </configuration>
                 </plugin>
+
+                <!-- Plugin to allow lazy-fetching an entity attribute using @Basic(fetch = FetchType.LAZY) -->
+                <plugin>
+                    <groupId>org.hibernate.orm.tooling</groupId>
+                    <artifactId>hibernate-enhance-maven-plugin</artifactId>
+                    <version>6.6.2.Final</version>
+                    <executions>
+                        <execution>
+                            <configuration>
+                                <failOnError>true</failOnError>
+                                <enableLazyInitialization>true</enableLazyInitialization>
+                            </configuration>
+                            <goals>
+                                <goal>enhance</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
             </plugins>
         </pluginManagement>
         <extensions>
