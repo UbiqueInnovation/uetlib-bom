@@ -295,6 +295,13 @@
     </dependencyManagement>
 
     <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>3.1.3</version>
+            </plugin>
+        </plugins>
         <extensions>
             <extension>
                 <groupId>kr.motd.maven</groupId>
@@ -319,8 +326,6 @@
     <distributionManagement>
         <repository>
             <id>ubique-artifactory</id>
-            <name>backend</name>
-            <url>https://artifactory.ubique.ch/artifactory/backend</url>
         </repository>
     </distributionManagement>
 </project>
