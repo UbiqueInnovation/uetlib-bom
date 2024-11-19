@@ -25,40 +25,19 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        include:
-          - package: uetlib-core
-            repository: uetlib-core
-            pom_path: uetlib-core/uetlib-core/pom.xml
-          - package: uetlib-geo
-            repository: uetlib-geo
-            pom_path: uetlib-geo/pom.xml
-          #          - package: uetlib-test
-          #            repository: uetlib-test
-          #            pom_path: uetlib-test/uetlib-test/pom.xml
-          #          - package: uetlib-test
-          #            repository: uetlib-testcontainers
-          #            pom_path: uetlib-test/uetlib-testcontainers/pom.xml
-          - package: uetlib-db
-            repository: uetlib-db
-            pom_path: uetlib-db/pom.xml
-          - package: uetlib-spring
-            repository: uetlib-spring
-            pom_path: uetlib-spring/pom.xml
-          - package: uetlib-spring-cloud
-            repository: uetlib-spring-cloud
-            pom_path: uetlib-spring-cloud/pom.xml
-          - package: uetlib-monitoring
-            repository: uetlib-monitoring
-            pom_path: uetlib-monitoring/pom.xml
-          - package: uetlib-storage-spring
-            repository: uetlib-storage-spring
-            pom_path: uetlib-storage-spring/pom.xml
-          - package: uetlib-job
-            repository: uetlib-job
-            pom_path: uetlib-job/pom.xml
-          - package: uetlib-job-testapp
-            repository: uetlib-job-testapp
-            pom_path: uetlib-job-testapp/pom.xml
+        repository:
+          - uetlib-core
+          - uetlib-test
+          - uetlib-testcontainers
+          - uetlib-db
+          - uetlib-storage
+          - uetlib-spring-boot
+          - uetlib-storage-spring-boot
+          - uetlib-spring-cloud
+          - uetlib-monitoring
+          - uetlib-job
+          - uetlib-geo
+          - uetlib-job-testapp
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -76,21 +55,21 @@ jobs:
           repositories: '[{"id" : "ubique-artifactory", "url" : "${{ secrets.UB_ARTIFACTORY_URL }}${{ secrets.UB_ARTIFACTORY_REPO_BACKEND }}"}]'
 
       - name: Build with Maven
-        run: mvn --batch-mode --update-snapshots install -DskipTests=true -f ./pom.xml
+        run: mvn --batch-mode --update-snapshots install
 
-      - name: Checkout ${{ matrix.repository }} to verify ${{ matrix.package }}
+      - name: Checkout ${{ matrix.repository }}
         uses: actions/checkout@v4
         with:
           repository: UbiqueInnovation/${{ matrix.repository }}
-          path: ${{ matrix.package }}
+          path: ${{ matrix.repository }}
           token: ${{ secrets.WORKFLOW_PAT_GITHUB }}
           ref: main
 
-      - name: Bump Parent Version for package ${{ matrix.package }}
-        run: mvn versions:update-parent -DallowSnapshots=true -f ${{ matrix.pom_path }}
+      - name: Bump Parent Version for package ${{ matrix.repository }}
+        run: mvn versions:update-parent -DallowSnapshots=true -f ${{ matrix.repository }}/pom.xml
 
-      - name: Build ${{ matrix.package }} with Maven
-        run: mvn --batch-mode --update-snapshots install -f ${{ matrix.pom_path }}
+      - name: Build ${{ matrix.repository }} with Maven
+        run: mvn --batch-mode --update-snapshots install -f ${{ matrix.repository }}/pom.xml
 
   deploy-dev-code_quality:
     name: Code Analysis (Sonar Cloud)
