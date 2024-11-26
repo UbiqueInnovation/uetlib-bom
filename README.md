@@ -4,27 +4,21 @@ Bill of Materials maven POM for uetlib libraries.
 
 ## Using
 
-### As parent
+### As dependencyManagement
 
-You can use this artifact as parent for your maven project. 
-This will set the dependency management, plugin management and set some basic maven properties. 
+You can use this artifact as dependencyManagement for your maven project.
 You can use it as following:
 
 ```xml
-<parent>
-    <groupId>ch.ubique</groupId>
-    <artifactId>uetlib-bom</artifactId>
-    <version>...</version>
-</parent>
-```
-
-To set up sonar cloud with coverage reports, add the following to your properties:
-
-```xml
-<properties>
-    <sonar.projectName>my-project</sonar.projectName>
-    <sonar.coverage.module>my-project-coverage</sonar.coverage.module>
-</properties>
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>ch.ubique</groupId>
+            <artifactId>uetlib-bom</artifactId>
+            <version>...</version>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
 ```
 
 ## Changelog
