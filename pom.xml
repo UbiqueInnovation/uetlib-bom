@@ -26,7 +26,7 @@
         <org.springdoc.version>2.7.0</org.springdoc.version>
 
         <!-- Sonar & Jacoco coverage reports -->
-        <sonar.coverage.module/>
+        <sonar.coverage.module>uetlib-bom</sonar.coverage.module>
         <sonar.coverage.jacoco.xmlReportPaths>
             ${project.basedir}/../${sonar.coverage.module}/target/site/jacoco-aggregate/jacoco.xml
         </sonar.coverage.jacoco.xmlReportPaths>
