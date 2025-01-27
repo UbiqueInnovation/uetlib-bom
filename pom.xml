@@ -19,11 +19,11 @@
         <!-- Versions -->
         <com.google.protobuf.version>4.29.3</com.google.protobuf.version>
         <io.sentry.version>8.0.0</io.sentry.version>
-        <org.geotools.version>32.1</org.geotools.version>
+        <org.geotools.version>32.2</org.geotools.version>
         <org.jacoco.version>0.8.12</org.jacoco.version>
         <org.locationtech.jts.version>1.20.0</org.locationtech.jts.version>
         <org.openstreetmap.osmosis.version>0.49.2</org.openstreetmap.osmosis.version>
-        <org.springdoc.version>2.7.0</org.springdoc.version>
+        <org.springdoc.version>2.8.4</org.springdoc.version>
 
         <!-- Sonar & Jacoco coverage reports -->
         <sonar.coverage.module>uetlib-bom</sonar.coverage.module>
