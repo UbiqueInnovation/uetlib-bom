@@ -18,7 +18,7 @@
 
         <!-- Versions -->
         <com.google.protobuf.version>4.30.2</com.google.protobuf.version>
-        <io.sentry.version>8.5.0</io.sentry.version>
+        <io.sentry.version>8.6.0</io.sentry.version>
         <org.geotools.version>32.2</org.geotools.version>
         <org.jacoco.version>0.8.12</org.jacoco.version>
         <org.locationtech.jts.version>1.20.0</org.locationtech.jts.version>
