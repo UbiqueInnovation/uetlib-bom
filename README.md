@@ -2,7 +2,7 @@
 
 Bill of Materials maven POM for uetlib libraries.
 
-This project specifies the third-party dependencies of `uetlib`.
+This project specifies **the third-party dependencies** of `uetlib`.
 The versions of the `uetlib-*` modules are specified
 in [`uetlib-self-bom`](https://github.com/UbiqueInnovation/uetlib-self-bom).
 
