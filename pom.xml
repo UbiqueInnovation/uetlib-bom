@@ -90,7 +90,7 @@
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
-                <version>33.4.7-jre</version>
+                <version>33.4.8-jre</version>
             </dependency>
             <dependency>
                 <groupId>com.google.protobuf</groupId>
@@ -319,7 +319,7 @@
             <dependency>
                 <groupId>software.amazon.awssdk</groupId>
                 <artifactId>bom</artifactId>
-                <version>2.31.21</version>
+                <version>2.31.26</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
