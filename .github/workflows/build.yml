@@ -74,7 +74,7 @@ jobs:
       - name: Build ${{ matrix.repository }} with Maven
         run: mvn --batch-mode --update-snapshots install -f ${{ matrix.repository }}/pom.xml
 
-  deploy-dev-code_quality:
+  code-quality:
     name: Code Analysis (Sonar Cloud)
     uses: UbiqueInnovation/workflows-backend/.github/workflows/mvn_verify_sonar.yml@main
     with:

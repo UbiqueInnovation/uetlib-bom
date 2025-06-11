@@ -34,7 +34,7 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- Used to read maven artifact versions, i.e. the version of uetlib used -->
+            <!-- Used to read maven artifact versions, i.e., the version of uetlib used -->
             <dependency>
                 <groupId>de.westemeyer</groupId>
                 <artifactId>artifact-version-service</artifactId>
@@ -107,11 +107,6 @@
                 <groupId>com.google.j2objc</groupId>
                 <artifactId>j2objc-annotations</artifactId>
                 <version>3.0.0</version>
-            </dependency>
-            <dependency>
-                <groupId>org.checkerframework</groupId>
-                <artifactId>checker-qual</artifactId>
-                <version>3.49.4</version>
             </dependency>
             <dependency>
                 <groupId>javax.measure</groupId>
