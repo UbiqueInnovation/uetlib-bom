@@ -311,6 +311,13 @@
                 <scope>import</scope>
             </dependency>
 
+            <!-- MinIO -->
+            <dependency>
+                <groupId>io.minio</groupId>
+                <artifactId>minio</artifactId>
+                <version>8.5.13</version>
+            </dependency>
+
             <!-- Feign -->
             <dependency>
                 <groupId>io.github.openfeign</groupId>
