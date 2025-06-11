@@ -26,8 +26,10 @@ jobs:
       fail-fast: false
       matrix:
         repository:
+          - uetlib-parent
           - uetlib-core
           - uetlib-test
+          - uetlib-spring-boot-test
           - uetlib-testcontainers
           - uetlib-db
           - uetlib-storage
@@ -38,6 +40,7 @@ jobs:
           - uetlib-job
           - uetlib-geo
           - uetlib-job-testapp
+          - uetlib-self-bom
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
