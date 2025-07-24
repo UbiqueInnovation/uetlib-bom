@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.2.2
+
+### Improvements
+
+- Include `com.twelvemonkeys.bom:bom` instead of only `com.twelvemonkeys.imageio:imageio-jpeg`
+
 ## 1.2.1
 
 ### Improvements
