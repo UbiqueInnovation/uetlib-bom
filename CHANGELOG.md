@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.2.3
+
+### Improvements
+
+- Add `commons-fileupload` as a managed version
+
 ## 1.2.2
 
 ### Improvements
