@@ -243,7 +243,7 @@
             <dependency>
                 <groupId>io.swagger.core.v3</groupId>
                 <artifactId>swagger-annotations-jakarta</artifactId>
-                <version>2.2.35</version>
+                <version>2.2.36</version>
             </dependency>
 
             <dependency>
@@ -308,7 +308,7 @@
                 <!-- Only this version is allowed by Renovate. For some stupid reason, there is a problem in azure-storage-common. @dsparber and @kistlers now the issue -->
                 <!-- @see https://github.com/Azure/azure-sdk-for-java/issues/43463#issuecomment-2615863860 -->
                 <!-- @see https://github.com/UbiqueInnovation/renovate-config-backend/blob/662cf20b367bb005cca1d607a9f32703a688efc1/base.json5 -->
-                <version>1.2.27</version>
+                <version>1.2.37</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -317,7 +317,7 @@
             <dependency>
                 <groupId>software.amazon.awssdk</groupId>
                 <artifactId>bom</artifactId>
-                <version>2.32.19</version>
+                <version>2.32.31</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -351,7 +351,7 @@
             <dependency>
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-bom</artifactId>
-                <version>2.8.9</version>
+                <version>2.8.11</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
