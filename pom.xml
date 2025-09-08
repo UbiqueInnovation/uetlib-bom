@@ -304,7 +304,11 @@
             <dependency>
                 <groupId>com.azure</groupId>
                 <artifactId>azure-sdk-bom</artifactId>
-                <version>1.2.38</version>
+                <!-- any later version has some issues with azure-storage-blob > 12.27.1 -->
+                <!-- Only this version is allowed by Renovate. For some stupid reason, there is a problem in azure-storage-common. @dsparber and @kistlers now the issue -->
+                <!-- @see https://github.com/Azure/azure-sdk-for-java/issues/43463#issuecomment-2615863860 -->
+                <!-- @see https://github.com/UbiqueInnovation/renovate-config-backend/blob/662cf20b367bb005cca1d607a9f32703a688efc1/base.json5 -->
+                <version>1.2.27</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
