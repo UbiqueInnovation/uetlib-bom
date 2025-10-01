@@ -384,33 +384,10 @@
             <!-- Bouncycastle -->
             <dependency>
                 <groupId>org.bouncycastle</groupId>
-                <artifactId>bcprov-jdk18on</artifactId>
-                <version>${org.bouncycastle.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.bouncycastle</groupId>
-                <artifactId>bcpkix-jdk18on</artifactId>
-                <version>${org.bouncycastle.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.bouncycastle</groupId>
-                <artifactId>bcutil-jdk18on</artifactId>
-                <version>${org.bouncycastle.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.bouncycastle</groupId>
-                <artifactId>bcpg-jdk18on</artifactId>
-                <version>${org.bouncycastle.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.bouncycastle</groupId>
-                <artifactId>bcmail-jdk18on</artifactId>
-                <version>${org.bouncycastle.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.bouncycastle</groupId>
-                <artifactId>bctls-jdk18on</artifactId>
-                <version>${org.bouncycastle.version}</version>
+                <artifactId>bc-jdk18on-bom</artifactId>
+                <version>1.82</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
