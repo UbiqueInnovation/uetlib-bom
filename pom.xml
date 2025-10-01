@@ -356,6 +356,15 @@
                 <scope>import</scope>
             </dependency>
 
+            <!-- Spring Integration -->
+            <dependency>
+                <groupId>org.springframework.integration</groupId>
+                <artifactId>spring-integration-bom</artifactId>
+                <version>6.5.2</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
             <!-- Jackson -->
             <dependency>
                 <groupId>com.fasterxml.jackson</groupId>
