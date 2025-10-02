@@ -1,5 +1,50 @@
 # CHANGELOG
 
+## 1.2.10
+
+### Improvements
+
+- Add `testcontainers-redis`
+
+## 1.2.9
+
+### Improvements
+
+- Replace bouncycastle versions with new BOM `bc-jdk18on-bom`
+- Renovate version updates
+
+## 1.2.8
+
+### Improvements
+
+- Renovate version updates
+
+## 1.2.7
+
+### Improvements
+
+- Renovate version updates
+
+## 1.2.6
+
+### Improvements
+
+- Renovate version updates
+
+## 1.2.5
+
+### Improvements
+
+- Add `kotlin-bom`
+- Renovate version updates
+
+## 1.2.4
+
+### Improvements
+
+- Add `jackson-bom`
+- Renovate version updates
+
 ## 1.2.3
 
 ### Improvements
