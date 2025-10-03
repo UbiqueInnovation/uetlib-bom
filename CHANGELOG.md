@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.2.11
+
+### Improvements
+
+- Add `commons-csv`
+
 ## 1.2.10
 
 ### Improvements
