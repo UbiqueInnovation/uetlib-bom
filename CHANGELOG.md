@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.2.12
+
+### Improvements
+
+- Newer `testcontainers-redis` versions are under a new group id.
+
 ## 1.2.11
 
 ### Improvements
