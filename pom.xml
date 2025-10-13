@@ -18,7 +18,6 @@
 
         <!-- Versions -->
         <org.bouncycastle.version>1.82</org.bouncycastle.version>
-        <org.geotools.version>33.2</org.geotools.version>
         <org.openstreetmap.osmosis.version>0.49.2</org.openstreetmap.osmosis.version>
 
         <!-- Sonar & Jacoco coverage reports -->
@@ -196,43 +195,10 @@
             </dependency>
             <dependency>
                 <groupId>org.geotools</groupId>
-                <artifactId>gt-geojson</artifactId>
-                <version>${org.geotools.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.geotools</groupId>
-                <artifactId>gt-geotiff</artifactId>
-                <version>${org.geotools.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.geotools</groupId>
-                <artifactId>gt-render</artifactId>
-                <version>${org.geotools.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.geotools</groupId>
-                <artifactId>gt-referencing</artifactId>
-                <version>${org.geotools.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.geotools</groupId>
-                <artifactId>gt-epsg-hsql</artifactId>
-                <version>${org.geotools.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.geotools</groupId>
-                <artifactId>gt-api</artifactId>
-                <version>${org.geotools.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.geotools</groupId>
-                <artifactId>gt-shapefile</artifactId>
-                <version>${org.geotools.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.geotools</groupId>
-                <artifactId>gt-geopkg</artifactId>
-                <version>${org.geotools.version}</version>
+                <artifactId>gt-bom</artifactId>
+                <version>34.0</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
 
             <!-- Sentry -->
