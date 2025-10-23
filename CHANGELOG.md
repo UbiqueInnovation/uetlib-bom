@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## 1.2.14
+
+### Improvements
+
+- Latest spring-integration version
+
+## 1.2.13
+
+### Improvements
+
+- Use the new gt-bom for geotools
+- Upgrade geotools to 34
+
 ## 1.2.12
 
 ### Improvements
