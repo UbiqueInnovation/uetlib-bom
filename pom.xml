@@ -178,6 +178,7 @@
                 <version>4.5.0</version>
             </dependency>
 
+            <!-- Geo Libraries-->
             <dependency>
                 <groupId>org.n52.jackson</groupId>
                 <artifactId>jackson-datatype-jts</artifactId>
@@ -199,6 +200,13 @@
                 <version>34.0</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>edu.ucar</groupId>
+                <artifactId>netcdf-java-bom</artifactId>
+                <version>5.9.1</version>
+                <scope>import</scope>
+                <type>pom</type>
             </dependency>
 
             <!-- Sentry -->
