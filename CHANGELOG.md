@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 1.3.1
+
+### Improvements
+
+- add `ch.ubique:inotify` to dependency management
+
+## 1.3.0
+
+### Improvements
+
+- Reorder dependencyManagement from least to highest privilege. At least the boms at the top, specific versions below.
+
 ## 1.2.14
 
 ### Improvements
