@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.3.2
+
+### Improvements
+
+- add `com.squareup.okhttp3:okhttp-bom` to dependency management
+
 ## 1.3.1
 
 ### Improvements
