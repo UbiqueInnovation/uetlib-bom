@@ -108,7 +108,7 @@
                 <scope>import</scope>
             </dependency>
 
-            <!-- 🧩 Observability, HTTP, testing -->
+            <!-- 🧩 Observability, HTTP -->
             <dependency>
                 <groupId>org.zalando</groupId>
                 <artifactId>logbook-bom</artifactId>
@@ -378,12 +378,6 @@
                 <groupId>net.time4j</groupId>
                 <artifactId>time4j-base</artifactId>
                 <version>5.9.4</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.redis</groupId>
-                <artifactId>testcontainers-redis</artifactId>
-                <version>2.2.4</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
