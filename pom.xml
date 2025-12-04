@@ -38,9 +38,9 @@
 
             <!-- 💾 Serialization & language BOMs -->
             <dependency>
-                <groupId>com.fasterxml.jackson</groupId>
+                <groupId>tools.jackson</groupId>
                 <artifactId>jackson-bom</artifactId>
-                <version>2.20.1</version>
+                <version>3.0.2</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -171,6 +171,12 @@
                 <groupId>io.minio</groupId>
                 <artifactId>minio</artifactId>
                 <version>8.6.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.zalando</groupId>
+                <artifactId>problem-spring-web-starter</artifactId>
+                <version>0.29.1</version>
             </dependency>
 
             <dependency>
@@ -323,12 +329,6 @@
             </dependency>
 
             <dependency>
-                <groupId>io.swagger.core.v3</groupId>
-                <artifactId>swagger-annotations-jakarta</artifactId>
-                <version>2.2.40</version>
-            </dependency>
-
-            <dependency>
                 <groupId>ch.ubique</groupId>
                 <artifactId>inotify</artifactId>
                 <version>2.0</version>
@@ -385,14 +385,6 @@
                 <artifactId>testcontainers-redis</artifactId>
                 <version>2.2.4</version>
             </dependency>
-
-            <!-- 🏗️ Build-tool dependencies (Jacoco etc.) -->
-            <dependency>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.14</version>
-            </dependency>
-
         </dependencies>
     </dependencyManagement>
 
