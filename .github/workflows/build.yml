@@ -43,7 +43,7 @@ jobs:
           - uetlib-self-bom
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Set up JDK
         uses: actions/setup-java@v5
@@ -61,7 +61,7 @@ jobs:
         run: mvn --batch-mode --update-snapshots install
 
       - name: Checkout ${{ matrix.repository }}
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: UbiqueInnovation/${{ matrix.repository }}
           path: ${{ matrix.repository }}
