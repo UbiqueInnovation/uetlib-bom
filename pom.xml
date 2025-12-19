@@ -420,12 +420,6 @@
         </repository>
     </repositories>
 
-    <distributionManagement>
-        <repository>
-            <id>ubique-artifactory</id>
-        </repository>
-    </distributionManagement>
-
     <scm>
         <url>https://github.com/UbiqueInnovation/uetlib-bom</url>
     </scm>
