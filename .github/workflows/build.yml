@@ -59,11 +59,25 @@ jobs:
           java-version: '25'
           distribution: 'temurin'
 
-      - name: Create custom artifactory settings.xml
-        uses: whelk-io/maven-settings-xml-action@9dc09b23833fa9aa7f27b63db287951856f3433d # v22
+      - name: Create custom mvn repository settings.xml
+        uses: s4u/maven-settings-action@894661b3ddae382f1ae8edbeab60987e08cf0788 # v4.0.0
         with:
-          servers: '[{"id": "ubique-artifactory", "username": "${{ secrets.UB_ARTIFACTORY_USER }}", "password": "${{ secrets.UB_ARTIFACTORY_PASSWORD }}"}]'
-          repositories: '[{"id" : "ubique-artifactory", "url" : "${{ secrets.UB_ARTIFACTORY_URL }}${{ secrets.UB_ARTIFACTORY_REPO_BACKEND }}"}]'
+          githubServer: false
+          servers: >-
+            [
+              {
+                "id": "ubique-artifactory",
+                "username": "${{ secrets.UB_ARTIFACTORY_USER }}",
+                "password": "${{ secrets.UB_ARTIFACTORY_PASSWORD }}"
+              }
+            ]
+          repositories: |
+            [
+              {
+                "id": "ubique-artifactory",
+                "url": "${{ secrets.UB_ARTIFACTORY_URL }}${{ secrets.UB_ARTIFACTORY_REPO_BACKEND }}"
+              }
+            ]
 
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots install
