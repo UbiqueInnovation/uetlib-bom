@@ -2,16 +2,12 @@
 
 ## 2026.0.0
 
-We adopt Calendar versioning (CalVer) `YYYY.MM.PATCH`
+We adopt Calendar versioning (CalVer) `yyyy.MM.PATCH`
 
 ### Version Upgrades
 
 - Upgrade to SpringDoc 3.0.0 for Spring Boot 4 support
 - Upgrade to Spring-Integration 7.0.0 for Spring Boot 4 support
-
-### Improvements
-
-- Java 25
 
 ## 1.3.2
 
