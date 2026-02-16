@@ -415,7 +415,7 @@
 
     <repositories>
         <repository>
-            <id>ubique-artifactory</id>
+            <id>ubique-artifactory-virtual</id>
             <name>ubique</name>
             <url>https://artifactory.ubique.ch/artifactory/ubique</url>
         </repository>
