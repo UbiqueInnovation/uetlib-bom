@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 2026.2.3
+
+- Add new `de.westemeyer:artifact-version-service-sping-boot:2.0.0`  
+
+## 2026.2.0
+
+- latest updates for February 2026
+- Upgrade `de.westemeyer:artifact-version-maven-plugin` to `2.0.0`
+
 ## 2026.0.0
 
 We adopt Calendar versioning (CalVer) `yyyy.MM.PATCH`
