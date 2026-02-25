@@ -19,7 +19,6 @@
         <!-- Versions -->
         <org.bouncycastle.version>1.82</org.bouncycastle.version>
         <org.openstreetmap.osmosis.version>0.49.2</org.openstreetmap.osmosis.version>
-        <de.westemeyer.artifact-version-service.version>2.0.0</de.westemeyer.artifact-version-service.version>
 
         <!-- Sonar & Jacoco coverage reports -->
         <sonar.coverage.module>uetlib-bom</sonar.coverage.module>
@@ -185,12 +184,7 @@
             <dependency>
                 <groupId>de.westemeyer</groupId>
                 <artifactId>artifact-version-service</artifactId>
-                <version>${de.westemeyer.artifact-version-service.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>de.westemeyer</groupId>
-                <artifactId>artifact-version-service-spring-boot</artifactId>
-                <version>${de.westemeyer.artifact-version-service.version}</version>
+                <version>2.0.0</version>
             </dependency>
 
             <dependency>
