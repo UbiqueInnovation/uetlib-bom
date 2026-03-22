@@ -87,7 +87,7 @@
             <dependency>
                 <groupId>org.geotools</groupId>
                 <artifactId>gt-bom</artifactId>
-                <version>34.2</version>
+                <version>34.3</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -120,7 +120,7 @@
             <dependency>
                 <groupId>io.sentry</groupId>
                 <artifactId>sentry-bom</artifactId>
-                <version>8.35.0</version>
+                <version>8.36.0</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -128,7 +128,7 @@
             <dependency>
                 <groupId>io.github.openfeign</groupId>
                 <artifactId>feign-bom</artifactId>
-                <version>13.9.3</version>
+                <version>13.11</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -190,7 +190,7 @@
             <dependency>
                 <groupId>ch.qos.logback.db</groupId>
                 <artifactId>logback-classic-db</artifactId>
-                <version>1.2.11.1</version>
+                <version>1.5.32</version>
             </dependency>
             <dependency>
                 <groupId>ch.qos.logback</groupId>
