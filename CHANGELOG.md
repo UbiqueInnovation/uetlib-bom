@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2026.3.0
+
+- latest updates for March 2026
+
 ## 2026.2.3
 
 - Add new `de.westemeyer:artifact-version-service-sping-boot:2.0.0`  
