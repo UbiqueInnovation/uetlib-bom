@@ -1,12 +1,17 @@
 # CHANGELOG
 
+## 2026.4.0
+
+- manage versions for `io.swagger.core.v3:swagger-core/annotations/models-jakarta`, not just `annotations` (
+  unfortunately, there is no BOM for this, yet)
+
 ## 2026.3.0
 
 - latest updates for March 2026
 
 ## 2026.2.3
 
-- Add new `de.westemeyer:artifact-version-service-sping-boot:2.0.0`  
+- Add new `de.westemeyer:artifact-version-service-sping-boot:2.0.0`
 
 ## 2026.2.0
 
