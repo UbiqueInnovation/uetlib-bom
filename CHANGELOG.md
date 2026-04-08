@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 2026.3.1
+## 2026.4.0
 
 - manage versions for `io.swagger.core.v3:swagger-core/annotations/models-jakarta`, not just `annotations` (
   unfortunately, there is no BOM for this, yet)
