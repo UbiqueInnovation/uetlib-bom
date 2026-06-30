@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026.06.0
+
+- Prepared for Spring Boot 4.1
+- Latest versions of all dependencies
+- Moved `spring-integration-bom` version management from `uetlib-bom` to `uetlib-parent`
+- updated GeoTools from `34` to `35`
+
 ## 2026.4.0
 
 - manage versions for `io.swagger.core.v3:swagger-core/annotations/models-jakarta`, not just `annotations` (
