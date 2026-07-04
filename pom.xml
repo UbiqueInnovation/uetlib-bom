@@ -96,7 +96,7 @@
             <dependency>
                 <groupId>edu.ucar</groupId>
                 <artifactId>netcdf-java-bom</artifactId>
-                <version>5.9.1</version>
+                <version>5.10.0</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -428,6 +428,11 @@
             <id>osgeo</id>
             <name>Open Source Geospatial Foundation Repository</name>
             <url>https://repo.osgeo.org/repository/release/</url>
+        </repository>
+        <repository>
+            <id>unidata-all</id>
+            <name>Unidata All</name>
+            <url>https://artifacts.unidata.ucar.edu/repository/unidata-all/</url>
         </repository>
     </repositories>
 
