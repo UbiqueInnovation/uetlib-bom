@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2026.07.0
+
+- Reordered dependencyManagement boms as they should be. Higher up imported boms take precedence, while exact pinned
+  versions below can override.
+- Updated `sentry`, `logback` and `netcdf
+
 ## 2026.06.0
 
 - Prepared for Spring Boot 4.1
