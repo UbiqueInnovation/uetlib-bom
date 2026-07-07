@@ -35,101 +35,39 @@
     <dependencyManagement>
         <dependencies>
 
-            <!-- 🧱 Base / Platform BOMs (foundation first) -->
+            <!--
+                Imported BOM precedence:
+                Maven uses the first managed version it encounters for overlapping entries
+                from imported BOMs. Therefore, keep the BOMs whose versions should be
+                authoritative first, and broader/foundation BOMs later.
 
-            <!-- 💾 Serialization & language BOMs -->
+                Explicit dependencyManagement entries below this imported-BOM block are
+                intentional hard pins for individual artifacts.
+            -->
+
+            <!-- 🔐 Security / crypto -->
             <dependency>
-                <groupId>tools.jackson</groupId>
-                <artifactId>jackson-bom</artifactId>
-                <version>3.2.0</version>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bc-jdk18on-bom</artifactId>
+                <version>1.84</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
 
+            <!-- 🧪 Testing -->
             <dependency>
-                <groupId>org.jetbrains.kotlin</groupId>
-                <artifactId>kotlin-bom</artifactId>
-                <version>2.4.0</version>
+                <groupId>org.testcontainers</groupId>
+                <artifactId>testcontainers-bom</artifactId>
+                <version>2.0.5</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
 
+            <!-- 🧩 Observability, HTTP, OpenAPI -->
             <dependency>
-                <groupId>com.google.protobuf</groupId>
-                <artifactId>protobuf-bom</artifactId>
-                <version>4.35.1</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <!-- ☁️ Cloud vendor SDK BOMs -->
-            <dependency>
-                <groupId>com.azure</groupId>
-                <artifactId>azure-sdk-bom</artifactId>
-                <!-- any later version has some issues with azure-storage-blob > 12.27.1 -->
-                <!-- Only this version is allowed by Renovate. For some stupid reason, there is a problem in azure-storage-common. @dsparber and @kistlers now the issue -->
-                <!-- Will probably be fixed (or at least we will have the exception visible in azure-storage-common:12.32.0, which is not yet in azure-sdk-bom:1.3.2 -->
-                <!-- @see https://github.com/Azure/azure-sdk-for-java/issues/43463#issuecomment-2615863860 -->
-                <!-- @see https://github.com/UbiqueInnovation/renovate-config-backend/blob/662cf20b367bb005cca1d607a9f32703a688efc1/base.json5 -->
-                <version>1.3.7</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>software.amazon.awssdk</groupId>
-                <artifactId>bom</artifactId>
-                <version>2.46.17</version> <!-- AWS BOM LAST so it wins -->
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <!-- 🧭 Mapping, geospatial, and image BOMs -->
-            <dependency>
-                <groupId>org.geotools</groupId>
-                <artifactId>gt-bom</artifactId>
-                <version>35.0</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>edu.ucar</groupId>
-                <artifactId>netcdf-java-bom</artifactId>
-                <version>5.10.0</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>com.twelvemonkeys.bom</groupId>
-                <artifactId>bom</artifactId>
-                <version>3.13.1</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <!-- 🧩 Observability, HTTP -->
-            <dependency>
-                <groupId>org.zalando</groupId>
-                <artifactId>logbook-bom</artifactId>
-                <version>4.0.4</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>io.sentry</groupId>
-                <artifactId>sentry-bom</artifactId>
-                <version>8.45.0</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>io.github.openfeign</groupId>
-                <artifactId>feign-bom</artifactId>
-                <version>13.13</version>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-bom</artifactId>
+                <version>3.0.3</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -143,26 +81,92 @@
             </dependency>
 
             <dependency>
-                <groupId>org.springdoc</groupId>
-                <artifactId>springdoc-openapi-bom</artifactId>
-                <version>3.0.3</version>
+                <groupId>io.github.openfeign</groupId>
+                <artifactId>feign-bom</artifactId>
+                <version>13.13</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
 
             <dependency>
-                <groupId>org.testcontainers</groupId>
-                <artifactId>testcontainers-bom</artifactId>
-                <version>2.0.5</version>
+                <groupId>io.sentry</groupId>
+                <artifactId>sentry-bom</artifactId>
+                <version>8.45.0</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
 
-            <!-- 🔐 Security / crypto -->
             <dependency>
-                <groupId>org.bouncycastle</groupId>
-                <artifactId>bc-jdk18on-bom</artifactId>
-                <version>1.84</version>
+                <groupId>org.zalando</groupId>
+                <artifactId>logbook-bom</artifactId>
+                <version>4.0.4</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- 🧭 Mapping, geospatial, and image BOMs -->
+            <dependency>
+                <groupId>com.twelvemonkeys.bom</groupId>
+                <artifactId>bom</artifactId>
+                <version>3.13.1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>edu.ucar</groupId>
+                <artifactId>netcdf-java-bom</artifactId>
+                <version>5.10.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.geotools</groupId>
+                <artifactId>gt-bom</artifactId>
+                <version>35.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- ☁️ Cloud vendor SDK BOMs -->
+            <dependency>
+                <groupId>software.amazon.awssdk</groupId>
+                <artifactId>bom</artifactId>
+                <version>2.46.17</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.azure</groupId>
+                <artifactId>azure-sdk-bom</artifactId>
+                <version>1.3.7</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- 💾 Serialization & language BOMs -->
+            <dependency>
+                <groupId>com.google.protobuf</groupId>
+                <artifactId>protobuf-bom</artifactId>
+                <version>4.35.1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-bom</artifactId>
+                <version>2.4.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>tools.jackson</groupId>
+                <artifactId>jackson-bom</artifactId>
+                <version>3.2.0</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -419,6 +423,11 @@
     </build>
 
     <repositories>
+        <repository>
+            <id>ubique-artifactory</id>
+            <name>backend</name>
+            <url>https://artifactory.ubique.ch/artifactory/backend</url>
+        </repository>
         <repository>
             <id>ubique-artifactory-virtual</id>
             <name>ubique</name>
