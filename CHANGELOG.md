@@ -1,10 +1,16 @@
 # CHANGELOG
 
+## 2026.07.1
+
+- Add dependency management for `com.google.errorprone:error_prone_core` and `com.uber.nullaway:nullaway`
+- Updated `tomcat`, `logback`, `aws-sdk`, `sentry`, `kubernetes:client-java`
+- Updated github actions
+
 ## 2026.07.0
 
 - Reordered dependencyManagement boms as they should be. Higher up imported boms take precedence, while exact pinned
   versions below can override.
-- Updated `sentry`, `logback` and `netcdf
+- Updated `sentry`, `logback` and `netcdf`
 
 ## 2026.06.0
 
