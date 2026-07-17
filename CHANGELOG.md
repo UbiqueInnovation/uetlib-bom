@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2026.07.2
+
+- Fix the url for Unidata All repository, see https://artifacts.unidata.ucar.edu/#/all/
+
 ## 2026.07.1
 
 - Add dependency management for `com.google.errorprone:error_prone_core` and `com.uber.nullaway:nullaway`
