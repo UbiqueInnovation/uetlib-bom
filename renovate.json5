@@ -3,11 +3,12 @@
     "extends": [
         "github>UbiqueInnovation/renovate-config-backend:base.json5"
     ],
-     "reviewers": [
+    "reviewers": [
         "dsparber",
         "kistlers"
     ],
     "schedule": [
-        "before 3am on the second day of the week"
+        // before 3am on the second day of the week
+        "* 0-3 * * 2"
     ]
 }
