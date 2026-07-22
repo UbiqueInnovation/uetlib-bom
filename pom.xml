@@ -32,8 +32,19 @@
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
-        <dependencyManagement>
-    <dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <!--
+                    Imported BOM precedence:
+                    Maven uses the first managed version it encounters for overlapping entries
+                    from imported BOMs. Therefore, keep the BOMs whose versions should be
+                    authoritative first, and broader/foundation BOMs later.
+
+                    Explicit dependencyManagement entries below this imported-BOM block are
+                    intentional hard pins for individual artifacts.
+            -->
+
+            <!-- 🔐 Security / crypto -->
             <dependency>
                 <groupId>org.bouncycastle</groupId>
                 <artifactId>bc-jdk18on-bom</artifactId>
@@ -41,6 +52,8 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!-- 🧪 Testing -->
             <dependency>
                 <groupId>org.testcontainers</groupId>
                 <artifactId>testcontainers-bom</artifactId>
@@ -48,6 +61,8 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!-- 💾 Serialization & language BOMs -->
             <dependency>
                 <groupId>com.google.protobuf</groupId>
                 <artifactId>protobuf-bom</artifactId>
@@ -55,6 +70,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <dependency>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-bom</artifactId>
@@ -62,6 +78,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <dependency>
                 <groupId>tools.jackson</groupId>
                 <artifactId>jackson-bom</artifactId>
@@ -69,6 +86,8 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!-- 🧩 Observability, HTTP, OpenAPI -->
             <dependency>
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-bom</artifactId>
@@ -76,6 +95,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <dependency>
                 <groupId>com.squareup.okhttp3</groupId>
                 <artifactId>okhttp-bom</artifactId>
@@ -83,6 +103,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <dependency>
                 <groupId>io.github.openfeign</groupId>
                 <artifactId>feign-bom</artifactId>
@@ -90,6 +111,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <dependency>
                 <groupId>io.sentry</groupId>
                 <artifactId>sentry-bom</artifactId>
@@ -97,6 +119,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <dependency>
                 <groupId>org.zalando</groupId>
                 <artifactId>logbook-bom</artifactId>
@@ -104,6 +127,8 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!-- 🧭 Mapping, geospatial, and image BOMs -->
             <dependency>
                 <groupId>com.twelvemonkeys.bom</groupId>
                 <artifactId>bom</artifactId>
@@ -111,6 +136,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <dependency>
                 <groupId>edu.ucar</groupId>
                 <artifactId>netcdf-java-bom</artifactId>
@@ -118,6 +144,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <dependency>
                 <groupId>org.geotools</groupId>
                 <artifactId>gt-bom</artifactId>
@@ -125,6 +152,8 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!-- ☁️ Cloud vendor SDK BOMs -->
             <dependency>
                 <groupId>software.amazon.awssdk</groupId>
                 <artifactId>bom</artifactId>
@@ -132,6 +161,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <dependency>
                 <groupId>com.azure</groupId>
                 <artifactId>azure-sdk-bom</artifactId>
@@ -139,16 +169,20 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!-- 🧰 Stand-alone pinned libraries (explicit versions) -->
             <dependency>
                 <groupId>io.minio</groupId>
                 <artifactId>minio</artifactId>
                 <version>9.0.3</version>
             </dependency>
+
             <dependency>
                 <groupId>de.westemeyer</groupId>
                 <artifactId>artifact-version-service</artifactId>
                 <version>2.0.0</version>
             </dependency>
+
             <dependency>
                 <groupId>ch.qos.logback.db</groupId>
                 <artifactId>logback-classic-db</artifactId>
@@ -164,21 +198,25 @@
                 <artifactId>logback-core</artifactId>
                 <version>1.5.38</version>
             </dependency>
+
             <dependency>
                 <groupId>io.swagger.core.v3</groupId>
                 <artifactId>swagger-core-jakarta</artifactId>
                 <version>${io.swagger.core.v3.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>io.swagger.core.v3</groupId>
                 <artifactId>swagger-annotations-jakarta</artifactId>
                 <version>${io.swagger.core.v3.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>io.swagger.core.v3</groupId>
                 <artifactId>swagger-models-jakarta</artifactId>
                 <version>${io.swagger.core.v3.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
@@ -209,16 +247,19 @@
                 <artifactId>commons-fileupload</artifactId>
                 <version>1.6.0</version>
             </dependency>
+
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>33.6.0-jre</version>
             </dependency>
+
             <dependency>
                 <groupId>org.locationtech.jts</groupId>
                 <artifactId>jts-core</artifactId>
                 <version>1.20.0</version>
             </dependency>
+
             <dependency>
                 <groupId>com.google.errorprone</groupId>
                 <artifactId>error_prone_annotations</artifactId>
@@ -234,6 +275,7 @@
                 <artifactId>nullaway</artifactId>
                 <version>0.13.7</version>
             </dependency>
+
             <dependency>
                 <groupId>com.google.j2objc</groupId>
                 <artifactId>j2objc-annotations</artifactId>
@@ -254,36 +296,49 @@
                 <artifactId>annotations</artifactId>
                 <version>26.1.0</version>
             </dependency>
+
+            <!-- library to resolve content types -->
             <dependency>
                 <groupId>com.j256.simplemagic</groupId>
                 <artifactId>simplemagic</artifactId>
                 <version>1.17</version>
             </dependency>
+
+            <!-- Type 'Version' to represent semver strings -->
             <dependency>
                 <groupId>com.github.zafarkhaja</groupId>
                 <artifactId>java-semver</artifactId>
                 <version>0.10.2</version>
             </dependency>
+
+            <!-- To support EL expression in custom jakarta validation messages -->
             <dependency>
                 <groupId>jakarta.el</groupId>
                 <artifactId>jakarta.el-api</artifactId>
                 <version>6.0.1</version>
             </dependency>
+
+            <!-- Apache Commons -->
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-compress</artifactId>
                 <version>1.28.0</version>
             </dependency>
+
+            <!-- Checked Exceptions-enabled Java 8+ functional interfaces + adapters -->
             <dependency>
                 <groupId>com.pivovarit</groupId>
                 <artifactId>throwing-function</artifactId>
                 <version>1.6.1</version>
             </dependency>
+
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-collections4</artifactId>
                 <version>4.5.0</version>
             </dependency>
+
+            <!-- Geo Libraries-->
             <dependency>
                 <groupId>org.openstreetmap.osmosis</groupId>
                 <artifactId>osmosis-core</artifactId>
@@ -294,16 +349,19 @@
                 <artifactId>osmosis-pbf2</artifactId>
                 <version>${org.openstreetmap.osmosis.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>ch.ubique</groupId>
                 <artifactId>inotify</artifactId>
                 <version>2.0</version>
             </dependency>
+
             <dependency>
                 <groupId>io.kubernetes</groupId>
                 <artifactId>client-java</artifactId>
                 <version>27.0.0</version>
             </dependency>
+
             <dependency>
                 <groupId>io.trbl</groupId>
                 <artifactId>blurhash</artifactId>
@@ -314,11 +372,13 @@
                 <artifactId>imgscalr-lib</artifactId>
                 <version>4.2</version>
             </dependency>
+
             <dependency>
                 <groupId>com.drewnoakes</groupId>
                 <artifactId>metadata-extractor</artifactId>
                 <version>2.20.0</version>
             </dependency>
+
             <dependency>
                 <groupId>org.apache.tomcat.embed</groupId>
                 <artifactId>tomcat-embed-core</artifactId>
@@ -329,21 +389,25 @@
                 <artifactId>tomcat-embed-el</artifactId>
                 <version>11.0.24</version>
             </dependency>
+
             <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>stomp-websocket</artifactId>
                 <version>2.3.4</version>
             </dependency>
+
             <dependency>
                 <groupId>net.time4j</groupId>
                 <artifactId>time4j-base</artifactId>
                 <version>5.9.4</version>
             </dependency>
+
             <dependency>
                 <groupId>org.reflections</groupId>
                 <artifactId>reflections</artifactId>
                 <version>0.10.2</version>
             </dependency>
+
             <dependency>
                 <groupId>com.j2html</groupId>
                 <artifactId>j2html</artifactId>
