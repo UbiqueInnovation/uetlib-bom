@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2026.7.3
+
+- Back to SemVer-compatible CalVer. No 0-padded months
+
 ## 2026.07.2
 
 - Fix the url for Unidata All repository, see https://artifacts.unidata.ucar.edu/#/all/
