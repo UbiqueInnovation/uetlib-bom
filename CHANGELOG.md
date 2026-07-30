@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2026.7.4
+
+- Version updates
+
 ## 2026.7.3
 
 - Back to SemVer-compatible CalVer. No 0-padded months
