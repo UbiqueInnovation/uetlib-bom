@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2026.7.5
+
+- updated actions to not run tests twice for sonar
+
 ## 2026.7.4
 
 - Version updates
