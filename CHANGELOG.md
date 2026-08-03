@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2026.7.6
+
+- Set `kotlin.version` as a property so projects can override it
+
 ## 2026.7.5
 
 - updated actions to not run tests twice for sonar
