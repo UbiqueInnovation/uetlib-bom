@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2026.8.0
+
+- Java 25 required
+
 ## 2026.7.6
 
 - Set `kotlin.version` as a property so projects can override it
