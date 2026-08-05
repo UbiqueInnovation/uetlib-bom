@@ -124,7 +124,7 @@
             <dependency>
                 <groupId>org.zalando</groupId>
                 <artifactId>logbook-bom</artifactId>
-                <version>4.0.4</version>
+                <version>4.1.0</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -192,12 +192,12 @@
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
-                <version>1.5.38</version>
+                <version>1.6.1</version>
             </dependency>
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-core</artifactId>
-                <version>1.5.38</version>
+                <version>1.6.1</version>
             </dependency>
 
             <dependency>
