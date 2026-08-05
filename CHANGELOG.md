@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2026.8.1
+
+- Version updates
+- Manage version of `net.postgis:postgis-jdbc`
+
 ## 2026.8.0
 
 - Java 25 required
