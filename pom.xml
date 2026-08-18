@@ -21,7 +21,7 @@
         <!-- Versions -->
         <org.bouncycastle.version>1.82</org.bouncycastle.version>
         <org.openstreetmap.osmosis.version>0.49.2</org.openstreetmap.osmosis.version>
-        <io.swagger.core.v3.version>2.2.52</io.swagger.core.v3.version>
+        <io.swagger.core.v3.version>2.2.53</io.swagger.core.v3.version>
 
         <!-- Sonar & Jacoco coverage reports -->
         <sonar.coverage.jacoco.xmlReportPaths>
@@ -49,7 +49,7 @@
             <dependency>
                 <groupId>org.bouncycastle</groupId>
                 <artifactId>bc-jdk18on-bom</artifactId>
-                <version>1.85</version>
+                <version>1.85.2</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
