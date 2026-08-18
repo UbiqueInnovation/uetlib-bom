@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2026.8.2
+
+- Version updates
+
 ## 2026.8.1
 
 - Version updates
