@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2026.8.3
+
+- Updated `de.westemeyer:artifact-version-service` to `2.1.0`, which is is now null-marked
+- Version updates
+
 ## 2026.8.2
 
 - Version updates
