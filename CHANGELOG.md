@@ -1,8 +1,13 @@
 # CHANGELOG
 
+## 2026.9.0
+
+- Version updates
+- Updated github actions
+
 ## 2026.8.4
 
-- Update  `de.westemeyer:artifact-version-service` to `3.0.0`
+- Update `de.westemeyer:artifact-version-service` to `3.0.0`
 - Add version management for `de.westemeyer:artifact-version-service-spring-boot` as `3.0.0`
 - Version updates
 
