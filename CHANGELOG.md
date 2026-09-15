@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2026.9.2
+
+- Version updates for `twelvemonkeys`, `kotlin`, `aws-sdk`, `springdoc`
+
 ## 2026.9.1
 
 - Version updates
