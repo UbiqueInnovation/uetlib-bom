@@ -108,7 +108,7 @@
             <dependency>
                 <groupId>io.github.openfeign</groupId>
                 <artifactId>feign-bom</artifactId>
-                <version>13.15</version>
+                <version>13.16</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -116,7 +116,7 @@
             <dependency>
                 <groupId>io.sentry</groupId>
                 <artifactId>sentry-bom</artifactId>
-                <version>8.58.0</version>
+                <version>8.59.0</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
