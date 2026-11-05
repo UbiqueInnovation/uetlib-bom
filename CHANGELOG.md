@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2026.11.2
+
+- Latest workflows that also deploys all releases to Artifactory
+
 ## 2026.11.1
 
 - Move Java packages and class references from `ch.ubique.uetlib` to `ch.uetlib`.
