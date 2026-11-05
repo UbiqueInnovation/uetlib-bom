@@ -9,7 +9,7 @@ jobs:
     name: Build Project
     permissions:
       contents: read
-    uses: UbiqueInnovation/uetlib/.github/workflows/mvn-install.yml@b1671a10aa6fa5f3110965f687141ca0c1faddde # v0.2.2
+    uses: UbiqueInnovation/uetlib/.github/workflows/mvn-install.yml@47e8bf2c7dec9c809e7d76542b7d953350badd36 # v0.2.3
     with:
       sonar: true
     secrets:
