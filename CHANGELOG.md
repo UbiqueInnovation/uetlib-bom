@@ -12,14 +12,11 @@
 
 - Move Java packages and class references from `ch.ubique.uetlib` to `ch.uetlib`.
 
-- deploy to Artifactory only for now on tag
-
 ## 2026.11.0
 
 ### Breaking changes
 
-- Move Java packages from `ch.ubique.backend` to `ch.uetlib`, including class-name resources. Existing Spring
-  configuration property keys are unchanged.
+- Move Java packages from `ch.ubique.backend` to `ch.uetlib`, including class-name resources. The combined OpenRewrite migration also renames known Spring configuration keys to `ch.uetlib.*`.
 - Remove the inherited Ubique Artifactory repository and deployment destination; private consumers must configure their
   own registry.
 - Add Apache-2.0 licensing for original code, preserve third-party licenses, and add public project metadata and
