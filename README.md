@@ -18,7 +18,7 @@ You can use it as following:
 <dependencyManagement>
     <dependencies>
         <dependency>
-            <groupId>ch.ubique</groupId>
+            <groupId>ch.uetlib</groupId>
             <artifactId>uetlib-bom</artifactId>
             <version>{latest}</version>
             <type>pom</type>
