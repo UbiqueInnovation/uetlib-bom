@@ -20,5 +20,3 @@
 **/*.log
 **/*.log.*
 **/import
-
-.sonar/
