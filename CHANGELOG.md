@@ -2,16 +2,7 @@
 
 ## 2026.11.4
 
-- Update shared Maven build and publish workflows to v0.2.4.
 - Clarify configuration-property migration guidance for consumers.
-
-## 2026.11.3
-
-- Latest workflows
-
-## 2026.11.2
-
-- Latest workflows that also deploys all releases to Artifactory
 
 ## 2026.11.1
 
