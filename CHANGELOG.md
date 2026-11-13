@@ -3,6 +3,8 @@
 ## 2026.11.5
 
 - Use shared Maven build and publish workflows at `v1.0.0` to enforce formatting checks in CI.
+- Restore the Apache-2.0 license, notice, contribution and security guidance, public POM metadata and public
+  upstream repositories that an earlier merge had removed.
 
 ## 2026.11.4
 
