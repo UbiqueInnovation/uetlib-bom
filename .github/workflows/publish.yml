@@ -9,3 +9,43 @@ jobs:
       contents: write
     uses: UbiqueInnovation/uetlib/.github/workflows/mvn-publish.yml@b68cc517848c43ba646b910a7e412a1c7b8752e8 # v1.0.0
     secrets: inherit
+  request-central:
+    name: Request Central release
+    needs: publish
+    # Skipped until the uetlib release App is configured for this repository.
+    if: ${{ vars.UETLIB_RELEASE_APP_CLIENT_ID != '' }}
+    runs-on: ubuntu-latest
+    permissions: {}
+    steps:
+      - name: Select stable release
+        id: release
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          version="${TAG#v}"
+          # Same stable-version rule as the staging workflow; prereleases stay in Artifactory.
+          if [[ "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ || "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+-[0-9]{4}\.[0-9]+\.[0-9]+$ ]]; then
+            echo "version=$version" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::$version is a prerelease; not requesting Central publication."
+          fi
+      - name: Create uetlib workflow token
+        if: ${{ steps.release.outputs.version != '' }}
+        id: token
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
+        with:
+          client-id: ${{ vars.UETLIB_RELEASE_APP_CLIENT_ID }}
+          private-key: ${{ secrets.UETLIB_RELEASE_APP_PRIVATE_KEY }}
+          owner: UbiqueInnovation
+          repositories: uetlib
+          permission-actions: write
+      - name: Request Central release
+        if: ${{ steps.release.outputs.version != '' }}
+        env:
+          GH_TOKEN: ${{ steps.token.outputs.token }}
+          REPOSITORY: ${{ github.event.repository.name }}
+          VERSION: ${{ steps.release.outputs.version }}
+        run: |
+          gh workflow run central-release.yml --repo UbiqueInnovation/uetlib --ref main \
+            -f repository="$REPOSITORY" -f version="$VERSION"
+          echo "Requested Central release of $REPOSITORY $VERSION; approve it in UbiqueInnovation/uetlib (Publish Central release)." >> "$GITHUB_STEP_SUMMARY"
