@@ -2,6 +2,8 @@
 
 ## 2026.11.5
 
+- Use shared Maven workflows at `v1.1.0`: wait for the SonarCloud quality gate and analyse with the
+  uetlib-only Sonar token.
 - Use shared Maven build and publish workflows at `v1.0.0` to enforce formatting checks in CI.
 - Restore the Apache-2.0 license, notice, contribution and security guidance, public POM metadata and public
   upstream repositories that an earlier merge had removed.
