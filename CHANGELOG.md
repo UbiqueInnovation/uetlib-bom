@@ -9,6 +9,8 @@
 - Use shared Maven build and publish workflows at `v1.0.0` to enforce formatting checks in CI.
 - Restore the Apache-2.0 license, notice, contribution and security guidance, public POM metadata and public
   upstream repositories that an earlier merge had removed.
+- Request Central publication of stable releases from the uetlib entry repository after staging, once the uetlib
+  release App is configured (proof of concept).
 
 ## 2026.11.4
 
