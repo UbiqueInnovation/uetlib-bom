@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2026.11.6
+
+- Pin the `os-maven-plugin` build extension to `1.7.1` so clean builds can resolve it reliably.
+- Updated dependencies and actions.
+
 ## 2026.11.5
 
 - Build pull requests, including forks, and pushes to `main` instead of every branch push; use shared Maven
